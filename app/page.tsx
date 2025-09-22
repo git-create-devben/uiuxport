@@ -18,7 +18,9 @@ export default function HomePage() {
           </div>
 
           {/* Main heading */}
-          <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance">
+          <h1 className="text-4
+          
+          xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance">
             <span className="text-black">Crafting Digital</span>
             <br />
             <span className="bg-gradient-to-r from-green-400 via-green-500 to-emerald-600 bg-clip-text text-transparent">
