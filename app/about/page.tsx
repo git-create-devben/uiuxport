@@ -1,6 +1,7 @@
 import { Sidebar } from "@/components/Sidebar"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, FileText } from "lucide-react"
+import Image from "next/image"
 
 export default function AboutPage() {
   return (
@@ -19,8 +20,8 @@ export default function AboutPage() {
                 <div>
                   <p className="text-lg font-medium text-gray-800 mb-4">Senior UX/UI & Web Designer based in Lagos</p>
                   <p className="mb-4">
-                    I'm passionate about crafting meaningful, user-centered digital experiences — from concept to
-                    polished interface. With over 5+ years of experience, I design engaging solutions that don't just
+                    I&apos;m passionate about crafting meaningful, user-centered digital experiences — from concept to
+                    polished interface. With over 5+ years of experience, I design engaging solutions that don&apos;t just
                     look good but also solve real user needs.
                   </p>
                 </div>
@@ -44,7 +45,7 @@ export default function AboutPage() {
                   <p>
                     <strong>Language:</strong> English (Fluent)
                   </p>
-                  <p className="text-[#d01879] font-medium">Let's connect!</p>
+                  <p className="text-[#d01879] font-medium">Let&apos;s connect!</p>
                 </div>
               </div>
 
@@ -115,10 +116,12 @@ export default function AboutPage() {
             {/* Right content - Profile image */}
             <div className="lg:col-span-1 flex justify-center lg:justify-end">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center">
-                <img
+                <Image
                   src="/professional-headshot-of-a-female-ux-ui-designer.jpg"
                   alt="Professional headshot"
                   className="w-full h-full object-cover"
+                  width={384}
+                  height={384}
                 />
               </div>
             </div>

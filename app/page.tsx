@@ -67,7 +67,7 @@ export default function HomePage() {
               size="lg"
               className="border-gray-300 text-gray-700 hover:text-black hover:border-green-500 px-8 py-3 text-lg font-medium rounded-lg transition-all duration-200 bg-transparent"
             >
-              Let's Collaborate
+              Let&apos;s Collaborate
               <ExternalLink className="ml-2 h-5 w-5" />
             </Button>
           </div>
