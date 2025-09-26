@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="flex justify-center space-x-6">
             {[
               // { icon: Dribbble, href: "#", label: "Dribbble" },
-              { icon: Behance, href: "#", label: "Behance" },
+              { icon: Behance, href: "https://www.behance.net/matthewibale", label: "Behance" },
               { icon: Linkedin, href: "https://www.linkedin.com/in/ibalematthew/", label: "LinkedIn" },
               { icon: Twitter, href: "https://x.com/ibalematthew?s=21", label: "Twitter" },
             ].map(({ icon: Icon, href, label }) => (
