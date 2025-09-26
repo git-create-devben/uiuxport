@@ -18,9 +18,7 @@ export default function HomePage() {
           </div>
 
           {/* Main heading */}
-          <h1 className="text-4
-          
-          xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance">
             <span className="text-black">Crafting Digital</span>
             <br />
             <span className="bg-gradient-to-r from-green-400 via-green-500 to-emerald-600 bg-clip-text text-transparent">
@@ -59,7 +57,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               href="/project"
-              className="bg-green-500 flex cursor-pointer items-center hover:bg-green-600 text-white px-8  text-lg font-medium rounded-lg transition-all duration-200 hover:scale-105"
+              className="bg-green-500 flex cursor-pointer items-center justify-center text-center hover:bg-green-600 text-white px-8 sm:py-1 py-2   text-lg font-medium rounded-lg transition-all duration-200 hover:scale-105"
             >
               
               View Project
@@ -67,7 +65,7 @@ export default function HomePage() {
             </Link>
             <Link
             href="/contact"
-              className="border-gray-300 border flex items-center text-gray-700 hover:text-black hover:border-green-500 px-8 py-1 text-lg font-medium rounded-lg transition-all duration-200 bg-transparent"
+              className="border-gray-300 border flex items-center justify-center text-gray-700 hover:text-black hover:border-green-500 px-8 sm:py-1 py-2 text-lg font-medium rounded-lg transition-all duration-200 bg-transparent"
             >
               Let&apos;s Collaborate
               <ExternalLink className="ml-2 h-5 w-5" />
