@@ -1,3 +1,4 @@
+"use client"
 import { Sidebar } from "@/components/Sidebar"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, FileText } from "lucide-react"
@@ -12,6 +13,17 @@ export default function AboutPage() {
       {/* Main content */}
       <main className="sm:ml-16 min-h-screen p-8 lg:p-16">
         <div className="max-w-6xl mx-auto">
+          <div className="lg:col-span-1 my-10 sm:hiiden md:hidden flex justify-center lg:justify-end">
+            <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center">
+              <Image
+                src={ABOUT_IMAGE}
+                alt="Professional headshot"
+                className="w-full h-full object-cover"
+                width={384}
+                height={384}
+              />
+            </div>
+          </div>
           <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
             {/* Left content - 2/3 width */}
             <div className="lg:col-span-2">
@@ -21,7 +33,7 @@ export default function AboutPage() {
                 <div>
                   <p className="text-lg font-medium text-gray-800 mb-4">Senior UX/UI & Web Designer based in Lagos</p>
                   <p className="mb-4">
-                    I&apos;m passionate about crafting meaningful, user-centered digital experiences — from concept to
+                    I&apos;m passionate about crafting meaningful, user-centered digital experiences from concept to
                     polished interface. With over 5+ years of experience, I design engaging solutions that don&apos;t just
                     look good but also solve real user needs.
                   </p>
@@ -53,7 +65,7 @@ export default function AboutPage() {
               <div className="mt-12">
                 <h2 className="text-3xl font-bold text-[#d01879] mb-6">Experience</h2>
                 <div className="space-y-4">
-                  <p className="text-gray-700">- 5+ years of professional experience in UX/UI Design</p>
+                  <p className="text-gray-700">5+ years of professional experience in UX/UI Design</p>
 
                   <div>
                     <h3 className="text-xl font-semibold text-black mb-3">Key Areas of Expertise:</h3>
@@ -99,13 +111,15 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row gap-4 mt-12">
                 <Button
                   size="lg"
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 text-lg font-medium rounded-lg transition-all duration-200 hover:scale-105"
+                  onClick={ () => window.location.href = "https://docs.google.com/document/d/17Ftdu8CFJDxRQHm17Q7Tm3W44Col0mCMVqHsug3azLw/edit?usp=sharing"}
+                  className="bg-blue-500 cursor-pointer hover:bg-blue-600 text-white px-8 py-3 text-lg font-medium rounded-lg transition-all duration-200 hover:scale-105"
                 >
                   <FileText className="mr-2 h-5 w-5" />
                   View Resume
                 </Button>
                 <Button
                   size="lg"
+                  onClick={() => window.location.href = "/contact"}
                   className="bg-[#d01879] hover:bg-[#d01879]/90 text-white px-8 py-3 text-lg font-medium rounded-lg transition-all duration-200 hover:scale-105"
                 >
                   <ExternalLink className="mr-2 h-5 w-5" />
@@ -115,7 +129,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right content - Profile image */}
-            <div className="lg:col-span-1 flex justify-center lg:justify-end">
+            <div className="lg:col-span-1  sm:flex hidden justify-center lg:justify-end">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center">
                 <Image
                   src={ABOUT_IMAGE}

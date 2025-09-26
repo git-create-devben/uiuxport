@@ -98,11 +98,11 @@ export function Sidebar({ accentColor = "green" }: SidebarProps) {
           fixed left-0 top-0 h-full ${accent.sidebarBg} border-r border-gray-200 z-50
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
-          flex flex-col items-center justify-center py-8
+          flex flex-col items-center justify-cente py-8
           w-full md:w-16
         `}
       >
-        <nav className="flex-1 flex flex-col items-center justify-center md:justify-start space-y-8 md:space-y-18 pt-8">
+        <nav className="flex- flex flex-col items-center justify-center md:justify-start space-y-8 md:space-y-18 pt-8">
           {navigation.map((item) => {
             const isActive = pathname === item.href
 

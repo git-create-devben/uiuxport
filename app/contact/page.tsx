@@ -1,3 +1,4 @@
+"use client"
 import { Mail, Phone, MapPin, Clock, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sidebar } from "@/components/Sidebar"
@@ -83,8 +84,9 @@ export default function ContactPage() {
                                 <Button
                                     variant="outline"
                                     size="lg"
-                                    className="w-full h-auto p-6 bg-gray-100/50 border-foreground/20 hover:bg-foreground/10 hover:border-foreground/40 transition-all duration-200"
+                                    className="w-full cursor-pointer h-auto p-6 bg-gray-100/50 border-foreground/20 hover:bg-foreground/10 hover:border-foreground/40 transition-all duration-200"
                                     asChild
+                                    onClick={() => window.location.href = "https://www.linkedin.com/in/ibalematthew/"}
                                 >
                                     <a href="#" className="flex flex-col items-center gap-3">
                                         <Linkedin className="w-20 h-20 text-blue-400" />
@@ -101,8 +103,9 @@ export default function ContactPage() {
                                 <Button
                                     variant="outline"
                                     size="lg"
-                                    className="w-full h-auto p-6 bg-gray-100/50 shadow-sm border-gray-400 text-gray-200 transition-all duration-200"
+                                    className="w-full cursor-pointer h-auto p-6 bg-gray-100/50 shadow-sm border-gray-400 text-gray-200 transition-all duration-200"
                                     asChild
+                                    onClick={() => window.location.href = "https://x.com/ibalematthew?s=21"}
                                 >
                                     <a href="#" className="flex flex-col items-center gap-3">
                                         <Twitter className="w-20 h-20 text-sky-400" />

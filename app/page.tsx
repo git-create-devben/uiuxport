@@ -1,6 +1,6 @@
 import { Sidebar } from "@/components/Sidebar"
-import { Button } from "@/components/ui/button"
 import { ArrowRight, ExternalLink, Twitter, Linkedin, Dribbble, Bean as Behance } from "lucide-react"
+import Link from "next/link"
 
 export default function HomePage() {
   return (
@@ -57,29 +57,29 @@ export default function HomePage() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button
-              size="lg"
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg font-medium rounded-lg transition-all duration-200 hover:scale-105"
+            <Link
+              href="/project"
+              className="bg-green-500 flex cursor-pointer items-center hover:bg-green-600 text-white px-8  text-lg font-medium rounded-lg transition-all duration-200 hover:scale-105"
             >
-              View Portfolio
+              
+              View Project
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-gray-300 text-gray-700 hover:text-black hover:border-green-500 px-8 py-3 text-lg font-medium rounded-lg transition-all duration-200 bg-transparent"
+            </Link>
+            <Link
+            href="/contact"
+              className="border-gray-300 border flex items-center text-gray-700 hover:text-black hover:border-green-500 px-8 py-1 text-lg font-medium rounded-lg transition-all duration-200 bg-transparent"
             >
               Let&apos;s Collaborate
               <ExternalLink className="ml-2 h-5 w-5" />
-            </Button>
+            </Link>
           </div>
 
           <div className="flex justify-center space-x-6">
             {[
-              { icon: Dribbble, href: "#", label: "Dribbble" },
+              // { icon: Dribbble, href: "#", label: "Dribbble" },
               { icon: Behance, href: "#", label: "Behance" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Twitter, href: "#", label: "Twitter" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/ibalematthew/", label: "LinkedIn" },
+              { icon: Twitter, href: "https://x.com/ibalematthew?s=21", label: "Twitter" },
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
