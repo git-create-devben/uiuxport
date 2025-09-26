@@ -2,6 +2,7 @@ import { Sidebar } from "@/components/Sidebar"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, FileText } from "lucide-react"
 import Image from "next/image"
+import ABOUT_IMAGE from '@/public/about.png'
 
 export default function AboutPage() {
   return (
@@ -28,7 +29,7 @@ export default function AboutPage() {
 
                 <div>
                   <p className="mb-4">
-                    💡 At Arravo, I design impactful web and mobile interfaces, contribute to design systems, and lead
+                    At Arravo, I design impactful web and mobile interfaces, contribute to design systems, and lead
                     creative improvements that enhance usability and performance.
                   </p>
                   <p className="mb-6">
@@ -117,7 +118,7 @@ export default function AboutPage() {
             <div className="lg:col-span-1 flex justify-center lg:justify-end">
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden bg-gray-100 flex items-center justify-center">
                 <Image
-                  src="/professional-headshot-of-a-female-ux-ui-designer.jpg"
+                  src={ABOUT_IMAGE}
                   alt="Professional headshot"
                   className="w-full h-full object-cover"
                   width={384}

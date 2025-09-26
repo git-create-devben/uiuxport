@@ -5,6 +5,8 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
+import LOGO from "@/public/logo.png"
 
 interface SidebarProps {
   accentColor?: string
@@ -81,7 +83,7 @@ export function Sidebar({ accentColor = "green" }: SidebarProps) {
       <Button
         variant="ghost"
         size="icon"
-        className="fixed top-4 left-4 z-50 md:hidden bg-white/80 backdrop-blur-sm text-black hover:bg-white/90 border border-gray-200"
+        className="fixed top-4 left-4 z-60 md:hidden bg-white/80 backdrop-blur-sm text-black hover:bg-white/90 border border-gray-200"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -93,13 +95,14 @@ export function Sidebar({ accentColor = "green" }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={`
-          fixed left-0 top-0 h-full w-16 ${accent.sidebarBg} border-r border-gray-200 z-50
+          fixed left-0 top-0 h-full ${accent.sidebarBg} border-r border-gray-200 z-50
           transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
-          flex flex-col items-center py-8
+          flex flex-col items-center justify-center py-8
+          w-full md:w-16
         `}
       >
-        <nav className="flex-1 flex flex-col items-center justify-start space-y-12 pt-8">
+        <nav className="flex-1 flex flex-col items-center justify-center md:justify-start space-y-8 md:space-y-18 pt-8">
           {navigation.map((item) => {
             const isActive = pathname === item.href
 
@@ -107,7 +110,8 @@ export function Sidebar({ accentColor = "green" }: SidebarProps) {
               <Link key={item.name} href={item.href} className="group relative" onClick={() => setIsOpen(false)}>
                 <div
                   className={`
-                    transform -rotate-90 whitespace-nowrap origin-center text-sm font-medium tracking-wider transition-all duration-200
+                    whitespace-nowrap origin-center font-medium tracking-wider transition-all duration-200
+                    text-2xl md:text-sm md:transform md:-rotate-90
                     ${isActive ? `${accent.text}` : `text-gray-600 hover:text-gray-900`}
                   `}
                 >
@@ -118,16 +122,14 @@ export function Sidebar({ accentColor = "green" }: SidebarProps) {
           })}
         </nav>
 
-        <div className="flex-1 flex  justify-center">
+        <div className="flex-1 flex justify-center items-end md:items-center pb-8 md:pb-0">
           <Link href="/" className="hover:scale-110 transition-transform duration-200">
-            <div className="w-8 h-8 bg-black rounded-sm flex items-center justify-center">
-              <span className="text-white font-bold text-lg">U</span>
-            </div>
+            <Image src={LOGO} alt="logo" width={100} height={100}/>
           </Link>
         </div>
 
         {/* Copyright */}
-        <div className="text-gray-400 text-xs transform -rotate-90 whitespace-nowrap">© 2024</div>
+        <div className="text-gray-400 text-xs md:transform md:-rotate-90 whitespace-nowrap pb-4 md:pb-0">© 2024</div>
       </aside>
     </>
   )

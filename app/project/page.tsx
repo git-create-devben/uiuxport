@@ -2,40 +2,43 @@ import { Sidebar } from "@/components/Sidebar"
 import { Button } from "@/components/ui/button"
 import { ExternalLink } from "lucide-react"
 import Image from "next/image"
+import SCUDO_WEB from "@/public/scudo-land.png"
+import DAT from "@/public/dat.png"
+import ACR from "@/public/acr.png"
 
 export default function ProjectPage() {
   const projects = [
     {
       id: 1,
-      title: "E-commerce Mobile App",
+      title: "Scudo Mobile App",
       description:
-        "A modern e-commerce mobile app design with intuitive user experience, featuring seamless checkout flow and personalized product recommendations.",
-      image: "/modern-e-commerce-mobile-app-interface-design.jpg",
-      link: "#",
+        "A modern insurance app design with an intuitive user experience, offering seamless policy purchase flows and personalized coverage recommendations.",
+      image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs_webp/a5353c232601033.689f5493bdcf0.png",
+      link: "https://www.behance.net/gallery/232601033/Scudo-Insurance-Mobile-App",
     },
     {
       id: 2,
-      title: "SaaS Dashboard Design",
+      title: "ACR",
       description:
-        "Clean and functional dashboard interface for a project management SaaS platform, focusing on data visualization and user productivity.",
-      image: "/clean-saas-dashboard-interface-with-charts-and-ana.jpg",
-      link: "#",
+        "A cutting-edge platform where assets meet opportunity featuring intuitive navigation, secure transactions, and personalized acquisition options.",
+      image: ACR,
+      link: "https://africanassetacq.com/",
     },
     {
       id: 3,
-      title: "Banking App Redesign",
+      title: "Datrisoft",
       description:
-        "Complete redesign of a banking mobile application with enhanced security features and improved user onboarding experience.",
-      image: "/modern-banking-mobile-app-interface-design.jpg",
-      link: "#",
+        "Datrisoft is a forward thinking tech company, building intelligent solutions that simplify processes, enhance experiences, and power digital transformation.",
+      image: DAT,
+      link: "https://www.figma.com/proto/LZHae7qbLZgNBLrqNrwO6w/Datrisoft?node-id=1-10&t=R559oa3wTsYX5yxy-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A10",
     },
     {
       id: 4,
-      title: "Food Delivery Platform",
+      title: "Scuo Web",
       description:
-        "User-centered design for a food delivery platform featuring restaurant discovery, order tracking, and seamless payment integration.",
-      image: "/food-delivery-app-interface-with-restaurant-listin.jpg",
-      link: "#",
+        "Scudo Web simplifies insurance with a user friendly platform that streamlines policy search, comparison, and purchase tailored to individual and business needs.",
+      image: SCUDO_WEB,
+      link: "https://scudoapp.co/",
     },
   ]
 
@@ -43,7 +46,7 @@ export default function ProjectPage() {
     <div className="min-h-screen bg-white">
       <Sidebar accentColor="orange" />
 
-      <main className="ml-16 p-8 lg:p-12">
+      <main className="sm:ml-16 p-8 lg:p-12">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="mb-12">
@@ -71,8 +74,8 @@ export default function ProjectPage() {
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     width={400}
-                    height={300}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    height={400}
+                    className="w-full h-full object-cove group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
